@@ -1,0 +1,91 @@
+/* Orange on the type: FF7300
+Red on car: CE1B4E , 870A2E , FF233B
+Tires: 282828
+*/
+@import url('https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@900&display=swap');
+* {
+	margin: 0;
+	padding: 0;
+	scroll-behavior: smooth;
+	box-sizing:border-box
+}
+
+.showcase-container {
+	position : fixed;
+	width: 100%;
+	height: 100%;
+	z-index: 10;
+	pointer-events: none;
+}
+
+#showcase-close-btn { 
+	display:none;
+	position: absolute;
+	padding: 0px;
+	top: 1rem;
+	left: 1rem;
+	width: 50px;
+	height: 50px;
+	background-color: #fff;
+	border-radius: 50%;
+	text-align: center;
+	z-index: 12;
+	cursor: pointer;
+	pointer-events: all;
+}
+#showcase-close-btn.active {
+	display:block;
+}
+#showcase-close-btn:hover {
+	background-color: black;
+	color: white;
+}
+
+#car-canvas { 
+	position : absolute;
+	top: 0px;
+	display: none;
+	width: 100%;
+	height: 100%;
+	z-index: 10;
+	pointer-events: none;
+}
+#car-canvas.active {	
+	display: block;
+	pointer-events: all;
+}
+#loading-container {
+	position : fixed;
+	width: 100%;
+	height: 100%;
+	background-color: black;
+	color: white;
+	z-index: 11;
+
+	opacity: 0;
+	transition: opacity 0.5s ease-in-out;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	pointer-events: none;
+}
+
+#loading-container.active {
+	opacity: 1;
+	transition: opacity 0.5s ease-in-out;
+}
+
+body {
+	background: #fff;
+	color: #000;
+	width: 100%;
+	overflow-x: hidden;
+	line-height: 1.6;
+}
+
+@media only screen and (max-width: 1200px) {
+	.scroll-lock {
+		overflow-y: hidden;
+	}
+}

@@ -1,0 +1,157 @@
+.navbar {
+    width: 100%;
+    height: 5rem;
+    display: flex;
+    position: fixed;
+	z-index: 9;
+    transition: background-color 0.2s linear;
+}
+.navbar.open {
+    background-color: black;
+	transition: background-color 0.2s linear;
+}
+.navbar.scrolled {
+	background-color: black;
+	transition: background-color 0.2s linear;
+}
+
+.navbar .container {
+	display:flex;
+	width: 20%;
+}
+
+.navbar .logo{
+	margin-left: 2rem;
+	height: 90%;
+	width: 20%;
+}
+.navbar .logo img{
+	height: 100%;
+	aspect-ratio: 1;
+
+}
+.navbar .menu-toggle {
+	display: none;
+	float: right;
+	height: 100%;
+	position: relative;
+	text-decoration: none;
+	color: #000;
+}
+.navbar .links {
+	margin-left: auto;
+  	font-family: 'Saira Condensed';
+	float: right;
+	list-style: none;
+	margin-right: 1rem;
+	display: flex;
+	font-size: 1.5rem;
+	width: 60%;
+	height: 100%;
+	flex-direction: row;
+	justify-content: end;
+	align-items: center;
+}
+
+.navbar .links a {
+	font-size: inherit;
+}
+
+.navbar .links li {
+	color: #000;
+	/* background-color: #000000; */
+	text-align: center;
+	width: 20%;
+	height: 80%;
+	min-width: fit-content;
+	transition: color 0.1s, background-color 0.2s;
+    margin-left: 0.5rem;
+	border-radius: 5px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.navbar.scrolled .links li {
+	color: #ff233b;
+	background-color: #000000;
+}
+
+.navbar .links li:hover {
+	color: #ff233b;
+	background-color: #000000;
+}
+.navbar.scrolled .links li:hover {
+	color: #000000;
+	background-color: #ff233b;
+}
+
+
+.navbar .links li a{
+	color: inherit ;
+	transition: color 0.1s;
+	text-decoration: none;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+@media only screen and (max-width: 1200px) {
+	.navbar .menu-toggle {
+		display: inline-block;
+		margin-left:auto;
+	}
+	.navbar.scrolled .menu-toggle{
+		color: #ff233b;
+	}
+	.navbar .container {
+		width: 100%;
+	}
+	.scroll-lock {
+		overflow-y: hidden;
+	}
+	.navbar .links {
+		visibility: hidden;
+		top: -100vh;
+		height: 100vh;
+		width: 100%;
+		flex-direction: column;
+		z-index: -1;
+		font-size: 4rem;
+		justify-content: center;
+		align-items: center;
+		background: #000000;
+		position: fixed;
+		transition: top 0.5s, visibility 0.5s;
+	}
+	.navbar .links.open {
+		visibility: visible;
+		top: 4rem;
+		transition: top 0.5s;
+	}
+
+	.navbar .links li:nth-child(even) {
+		-webkit-clip-path: polygon(4% 100%, 0 0, 96% 0, 100% 100%);
+		clip-path: polygon(4% 100%, 0 0, 96% 0, 100% 100%);
+	}
+
+	.navbar .links li:last-child {
+		margin-bottom: 2rem;
+	}
+	.navbar .links li {
+		width: 90%;
+		border: 4px ridge #6e1414;
+		background-color: #ff233b;
+		height: 12%;
+		margin-bottom: 1rem;
+		font-size: 2.5rem;
+		-webkit-clip-path: polygon(0 100%, 4% 0, 100% 0, 96% 100%);
+		clip-path: polygon(0 100%, 4% 0, 100% 0, 96% 100%);
+	}
+    .navbar .links li.highlighted {
+		color: #000000;
+	    background-color: #ff233b;
+	}
+	
+}

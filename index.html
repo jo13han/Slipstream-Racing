@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-79NKN7TQ51"></script>
+	<script>
+ 	 window.dataLayer = window.dataLayer || [];
+  	function gtag(){dataLayer.push(arguments);}
+  	gtag('js', new Date()); //
+	gtag('config', 'G-79NKN7TQ51');
+		</script>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Slipstream Racing</title>
+		<link rel="stylesheet" href="styles/main.css" />
+		<link rel="stylesheet" href="styles/navbar.css" />
+		<link rel="stylesheet" href="styles/sections.css" />
+		<link rel="stylesheet" href="styles/carousel.css" />
+		<link rel="stylesheet" href="styles/menuButton.css" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" /> 
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link rel="icon" type="image/x-icon" href="/assets/images/ssr1.png">
+	</head>
+	<body>
+		<nav class="navbar">
+			<div class="container">
+				<div class="logo">
+					<a href="#Home"><img src="assets/images/ssr1.png" alt="logo"/></a>
+				</div>
+
+				<button class="menu-toggle" onclick="handleMenu()" aria-expanded="false">
+					<span class="screen-reader-text">Menu</span>
+					<svg class="icon icon-menu-toggle" aria-hidden="true" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 100 100">
+						<g class="svg-menu-toggle">
+							<path class="line line-1" d="M5 13h90v14H5z"/>
+							<path class="line line-2" d="M5 43h90v14H5z"/>
+							<path class="line line-3" d="M5 73h90v14H5z"/>
+						</g>
+					</svg>
+				</button>
+			</div>
+			
+			<ul class="links responsive">
+				<li class="highlighted"><a href="#Home">Home</a></li>
+    		    <li><a href="#TheTeam">The Team</a></li>
+				<li><a href="#AboutUs">About Us</a></li>
+				<li><a href="#Competition">Competition</a></li>
+				<li><a href="#Sponsors">Sponsors</a></li>
+				<li><a href="#Contact">Contact</a></li>
+			</ul>
+		</nav>
+		<div class="showcase-container">
+			<div id="loading-container"> 
+				<div id="loading-text">
+					<h1>Loading...</h1>
+				</div> 
+			</div>
+			<button id="showcase-close-btn">X</button>
+			<canvas id="car-canvas" class=""></canvas>
+		</div>
+		<section id="Home">
+			<h1 class="name">SLIPSTREAM RACING</h1>
+			<div class="topsection">
+				<div class="car-container">
+					<canvas 
+						class="car" data-max-height="500px">
+					</canvas>				
+				</div>
+			</div>
+			<div class="vieww">		
+				<button name="button" id="showcase-btn" value="OK" style="font-size: 2rem;" type="button">View in 3D</button>  				
+			</div>
+		</section>
+		<section id="TheTeam">
+			<h1 class="sec_heading">The Team</h1>
+			<div class="sec_container">
+        				<div class="images">
+					<!-- Slideshow container -->
+					<div class="slideshow-container">
+						<!-- Full-width images with number and caption text -->
+						<div class="mySlides fade">
+							<div class="numbertext">1 / 5</div>
+							<img src="assets/images/micah.jpeg" style="width: 100%" />
+							<div class="text"></div>
+						</div>
+
+						<div class="mySlides fade">
+							<div class="numbertext">2 / 5</div>
+							<img src="assets/images/mukhesh.jpeg" style="width: 100%" />
+							<div class="text"></div>
+						</div>
+
+						<div class="mySlides fade">
+							<div class="numbertext">3 / 5</div>
+							<img src="assets/images/ali.jpeg" style="width: 100%" />
+							<div class="text"></div>
+						</div>
+						<div class="mySlides fade">
+							<div class="numbertext">4 / 5</div>
+							<img src="assets/images/yashas.jpeg" style="width: 100%" />
+							<div class="text"></div>
+						</div>
+						<div class="mySlides fade">
+							<div class="numbertext">5 / 5</div>
+							<img src="assets/images/johan.jpeg" style="width: 100%" />
+							<div class="text"></div>
+						</div>
+						<!-- Next and previous buttons -->
+						<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+						<a class="next" onclick="plusSlides(1)">&#10095;</a>
+					</div>
+					<br />
+
+					<!-- The dots/circles -->
+					<div style="text-align: center">
+						<span class="dot" onclick="currentSlide(1)"></span>
+						<span class="dot" onclick="currentSlide(2)"></span>
+						<span class="dot" onclick="currentSlide(3)"></span>
+						<span class="dot" onclick="currentSlide(4)"></span>
+						<span class="dot" onclick="currentSlide(5)"></span>
+					</div>
+				</div>
+      </div>
+		</section>
+		<section id="AboutUs">
+			<h1 class="sec_heading">About Us</h1>
+			<div class="sec_container">
+				<div class="description">
+					<p>
+						Formed in late 2021, Slipstream Racing is a team of 5 passionate, dedicated 11th graders, endeavouring to translate our passion in science, technology and most importantly, motorsport, into success at the 2022 Season of F1 In Schools, India. Based in Bangalore, Karnataka, the members of Slipstream Racing studied together at Clarence High School until the 10th grade, where the team was created.
+						Slipstream Racing is guided by 4 fundamental principles, which as the cornerstones of the functioning of our team:
+					</p>
+                    <p>
+						<u><b>Innovation:</b></u> The spirit of innovation at Slipstream Racing is well captured by our motto, ‘Redefining the limits through innovation’  - innovation has been a cornerstone of success in the world of motorsport. Similar to our debutant team, innovation has been the single most effective tool for teams regarded as the underdogs, which is what the team aims to emulate as we hit the ground running as a competitive outfit - by introducing unprecedented technology and strategies to F1 In Schools. 
+					</p>
+					<p>
+						<u><b>Resilience:</b></u> Realising our goals as a team takes a significant amount of dedication, hardwork and resilience to achieve. We have integrated resilience into the very core of our team to enhance our efforts to maximise our potential.  
+					<p>
+						<u><b>Collaboration:</b></u> As in the case of any modern enterprise, attaining high standards of performance requires working hand-in-hand with others. By observing, learning and putting our minds together, there is scope to catapult the team right to the top.  
+					</p>
+					<p>
+						<u><b>Sustainability:</b></u> Pioneering the use of sustainable practises is one of Formula 1’s most important goals. Through green, eco-friendly processes used in the design and manufacture of our car, merchandise and pit display, contributing to climate neutrality and actively enhancing economic, social and environmental sustainability is of paramount importance to the Slipstream Racing team. 
+					</p>
+				</div>
+			</div>
+		</section>
+		<section id="Competition">
+			<h1 class="sec_heading">Competition</h1>
+			<div class="sec_container">
+			<div class="comptext">
+				<p>	
+					F1 In Schools is the World’s largest STEM Challenge with over 20 million students taking part, spanning ages from 9 through 19, which is organised internationally by F1 In Schools Ltd - a non-profit which works with several other partners, including Formula 1 itself - to conduct this competition aimed at bringing about a paradigm shift in Science, Technology, Engineering and Maths and allowing for young minds to broaden their understanding on careers in engineering, Formula 1, Science, marketing and technology. </p>
+				<p>
+					Over the course of the Competition, students employ Computer Aided Design (CAD) and Computer Aided Manufacture (CAM) Software to design, develop, analyse, manufacture and ultimately race miniature F1 In Schools cars. These cars are carved using CNC Machines from a polyurethane block along with 3-D Printed parts and they are powered by compressed Carbon Dioxide cartridges. The F1 In Schools STEM Challenge inspires students to use Information Technology in order to learn about topics such as aerodynamics, design, manufacture, branding, graphics, sponsorship, marketing, leadership/teamwork, media skills and financial strategy and apply them in a practical, imaginative, competitive and exciting way outside the realms of an orthodox classroom setting. To this extent, previous successful competitors in the competition have gone on to secure internships at the Williams Engineering Academy and secure employment at Formula 1 teams such as Mercedes-Benz AMG Petronas Formula 1 Team and Williams Racing, among other highly established organisations in the fields of Science, Technology, Engineering and Maths.
+				</p>
+			</div>
+			<div class="competitionpic">
+				<img src="assets/images/comppic.jpg"/>
+			</div>
+			</div>
+		</section>
+		<section id="Sponsors">
+			<h1 class="sec_heading">Sponsors</h1>
+			<div class="sec_container">
+				<a href="https://airshaper.com/">
+					<img src="assets/images/airshaper.png" height="500px" width="500px"/>
+				</a>
+				<a href="https://www.creaidlabs.com">
+					<img src="assets/images/creaid.png" height="490px" width="490px"/>
+				</a>
+			</div>
+		</section>
+		<section id="Contact">
+			<h1 class="sec_heading">Contact</h1>
+			<div class="sec_container">
+				<a href="https://in.linkedin.com/in/slipstream-racing-65380b230?trk=public_profile_samename-profile">
+					<img src="assets/images/linkedin.png" />
+				</a>
+				<a href="https://www.instagram.com/slipstream.racingf1/">
+					<img src="assets/images/instagram.png" />
+				</a>
+				<a href="https://twitter.com/slipstreamf1_?t=pubCizKClT0cgBSP7lanDw&s=09">
+					<img src="assets/images/twitter.png" />
+				</a>
+				<a href="https://mail.google.com/mail/?view=cm&fs=1&to=slipstream.racingf1inschools@gmail.com" target="_blank">
+					<img src="assets/images/gmail.png"/>
+				</a>
+			</div>
+			<div class="phone">
+				<a href="tel:+91 6364553991" style="color: #000;">Call us at +91 6364 553 991</a>
+				</div>
+		</section>
+		<script type="module" src="scripts/car.js"></script>
+		<script type="module"src="scripts/car_showcase.js"></script>
+		<script src="scripts/carousel.js"></script>
+		<script src="scripts/navbar.js"></script>	
+	</body>
+</html>

@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+button,
+input[type="button"] {
+	border: none;
+	color: #000;
+	cursor: pointer;
+    background: none;
+	display: inline-block;
+	padding: 1em 1.5em;
+	text-transform: uppercase;
+	transition: all 0.25s ease-in-out;
+	font-family: "Saira Condensed";
+	font-size: 0.9rem;
+}
+
+.icon {
+	display: inline-block;
+	fill: currentColor;
+	height: 1em;
+	width: 1em;
+	vertical-align: middle;
+	position: relative; /* Align more nicely with capital letters */
+	top: -0.0625em;
+}
+
+/* Menu toggle styles. */
+
+.icon-menu-toggle {
+	width: 2em;
+	height: 2em;
+	top: 0;
+}
+
+/* Animate menu icon (lines). */
+.svg-menu-toggle .line {
+	opacity: 1;
+	transform: rotate(0) translateY(0) translateX(0);
+	transform-origin: 1em 1em;
+	transition: transform 0.3s ease-in-out, opacity 0.2s ease-in-out;
+}
+.svg-menu-toggle .line-1 {
+	transform-origin: 1em 2.5em;
+}
+.svg-menu-toggle .line-3 {
+	transform-origin: 1em 4.5em;
+}
+
+.menu-toggle.opened {
+	color: #ff233b;
+}
+.menu-toggle.opened .svg-menu-toggle .line-1 {
+	transform: rotate(45deg) translateY(0) translateX(0);
+}
+.menu-toggle.opened .svg-menu-toggle .line-2 {
+	opacity: 0;
+}
+.menu-toggle.opened .svg-menu-toggle .line-3 {
+	transform: rotate(-45deg) translateY(0em) translateX(0em);
+}
+
+/* Text meant only for screen readers. */
+.screen-reader-text {
+	clip: rect(1px, 1px, 1px, 1px);
+	position: absolute !important;
+	height: 1px;
+	width: 1px;
+	overflow: hidden;
+}
