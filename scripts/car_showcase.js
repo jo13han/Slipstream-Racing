@@ -86,11 +86,11 @@ closeBtn.onclick = function () {
 	controls.update();
 	//controls.target.add(new THREE.Vector3(0, 0, 2));
 
-	const roughnessMap = new THREE.TextureLoader().load("../assets/textures/roughness_map.jpg", (tex) => {
+	const roughnessMap = new THREE.TextureLoader().load(`${window.location.pathname}assets/textures/roughness_map.jpg`, (tex) => {
 		tex.wrapS = tex.wrapT = THREE.RepeatWrapping;
 		tex.repeat.set(10, 10);
 	});
-	const normalMap = new THREE.TextureLoader().load("../assets/textures/normal_map.jpg", (tex) => {
+	const normalMap = new THREE.TextureLoader().load(`${window.location.pathname}assets/textures/normal_map.jpg`, (tex) => {
 		tex.wrapS = tex.wrapT = THREE.RepeatWrapping;
 		tex.repeat.set(10, 10);
 	});
@@ -138,7 +138,7 @@ closeBtn.onclick = function () {
 	let car;
 	const fbxLoader = new FBXLoader();
 	fbxLoader
-		.loadAsync("../assets/f1_carog.fbx", (xhr) => {
+		.loadAsync(`${window.location.pathname}assets/f1_carog.fbx`, (xhr) => {
 			console.log((xhr.loaded / xhr.total) * 100 + "% loaded");
 		})
 		.then((object) => {

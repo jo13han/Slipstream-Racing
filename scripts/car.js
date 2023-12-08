@@ -76,7 +76,7 @@ scene.add(backLight);
 let car;
 const fbxLoader = new FBXLoader();
 fbxLoader
-	.loadAsync("../assets/f1_carog.fbx", (xhr) => {
+	.loadAsync(`${window.location.pathname}assets/f1_carog.fbx`, (xhr) => {
 		console.log((xhr.loaded / xhr.total) * 100 + "% loaded");
 	})
 	.then((object) => {
